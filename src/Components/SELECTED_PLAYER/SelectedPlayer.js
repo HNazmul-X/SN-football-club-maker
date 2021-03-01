@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import "./Selected_player.css"
 
-const SelectedPlayer = (props) => {
+const SelectedPlayer = (props) => { // here also pass setIsShowFullTeamVisible via props
     
     const players = props.selectedPlayers;
     const totalSellary = players.reduce((acc,curr)=>acc + curr.sellary,0)

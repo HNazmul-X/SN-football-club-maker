@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import welcomeImg from "../../images/welcome-animate.svg"
 import "./Greeting.css"
 const Greeting = () => {
-    const [hideGreeting, setHideGreeting] = useState(true)
+    const [hideGreeting, setHideGreeting] = useState(true) // for show and hiding greeting
 
     return (
         <div>

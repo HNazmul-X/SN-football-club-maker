@@ -23,7 +23,7 @@ const MainPage = () => {
             setAlert(true);
         }
     };
-    
+
     const largePreview = (player) => {
         setPlayerForPreview(player);
     };
@@ -56,7 +56,7 @@ const MainPage = () => {
                         <FontAwesomeIcon style={{ color: "green" }} icon={faCheckCircle} /> Choose Player your Team
                     </h3>
                     <hr className="m-1" />
-                    <div className="inner">
+                    <div className="inner"> {/** plyer all cards mapping here */}
                         {Players.map((player) => (
                             <PlayerCard largePreview={largePreview} getSelectedPlayers={getSelectedPlayers} player={player}></PlayerCard>
                         ))}
@@ -64,6 +64,9 @@ const MainPage = () => {
                 </div>
             </div>
             <FullTeamViewer isShowFullTeamVisible={isShowFullTeamVisible} setIsShowFullTeamVisible={setIsShowFullTeamVisible} selectedPlayers={selectedPlayers} />
+            <div className="footer">
+                <p>Developed and Designed by H_nazmul_Hassan || Copyright © 2020</p>
+            </div>
         </div>
     );
 };

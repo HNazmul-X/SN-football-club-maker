@@ -65,4 +65,10 @@ nav.navbar {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+.footer{
+  background:#c8dbff;
+  padding:10px;
+  text-align: center;
+}
 /*# sourceMappingURL=MainPage.css.map */
