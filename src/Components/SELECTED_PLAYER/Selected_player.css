@@ -38,4 +38,13 @@
   border-radius: 50%;
   font-size: 22px;
 }
+
+.fts-button {
+  font-size: 14px;
+  border: 1px solid #738cbd;
+  background: white;
+  color: #6c83af;
+  font-weight: 500;
+  border-radius: 20px;
+}
 /*# sourceMappingURL=Selected_player.css.map */

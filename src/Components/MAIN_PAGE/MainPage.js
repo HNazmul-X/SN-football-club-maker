@@ -3,32 +3,30 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import PlayerPreview from "../PLAYER_PREVIEW/PlayerPreview";
 import "./MainPage.css";
-import PlayersData from '../../Data/Data.json';
+import PlayersData from "../../Data/Data.json";
 import PlayerCard from "../PLAYER_CARD/PlayerCard";
 import SelectedPlayer from "../SELECTED_PLAYER/SelectedPlayer";
 import Alert from "../Utilities/Alert";
-
-
-
+import FullTeamViewer from "../FULL_TEAM_VIEWER/FullTeamViewer";
 
 const MainPage = () => {
-    
-    const [Players, setPlayers] = useState(PlayersData)
-    const [selectedPlayers, setSelectedPlayers] = useState([])
-    const [playerForPreview, setPlayerForPreview] = useState( Players[0]);
-    const [alert, setAlert] = useState(false) //for alert 
+    const [Players, setPlayers] = useState(PlayersData); // player data import from json file
+    const [selectedPlayers, setSelectedPlayers] = useState([]); // to stroge selected player
+    const [playerForPreview, setPlayerForPreview] = useState(Players[0]); //  get specific player for preview
+    const [alert, setAlert] = useState(false); //for alert
+    const [isShowFullTeamVisible, setIsShowFullTeamVisible] = useState(false); // full team viewer visiblity
 
     const getSelectedPlayers = (player) => {
-        if(selectedPlayers.indexOf(player) === -1){
+        if (selectedPlayers.indexOf(player) === -1) {
             setSelectedPlayers([...selectedPlayers, player]);
+        } else {
+            setAlert(true);
         }
-        else{
-           setAlert(true)
-        }
-    }
-    const largePreview = (player) =>{
+    };
+    
+    const largePreview = (player) => {
         setPlayerForPreview(player);
-    }
+    };
 
     return (
         <div>
@@ -36,7 +34,9 @@ const MainPage = () => {
 
             {/* navbar */}
             <nav className="navbar">
-                <h1> <FontAwesomeIcon icon={faVolleyballBall}/> SN Fc</h1>
+                <h1>
+                    <FontAwesomeIcon icon={faVolleyballBall} /> SN Fc
+                </h1>
             </nav>
 
             {/* page layout */}
@@ -47,7 +47,7 @@ const MainPage = () => {
 
                 <div className="right-site">
                     <div className="inner">
-                        <SelectedPlayer selectedPlayers={selectedPlayers}></SelectedPlayer>
+                        <SelectedPlayer setIsShowFullTeamVisible={setIsShowFullTeamVisible} selectedPlayers={selectedPlayers}></SelectedPlayer>
                     </div>
                 </div>
 
@@ -63,6 +63,7 @@ const MainPage = () => {
                     </div>
                 </div>
             </div>
+            <FullTeamViewer isShowFullTeamVisible={isShowFullTeamVisible} setIsShowFullTeamVisible={setIsShowFullTeamVisible} selectedPlayers={selectedPlayers} />
         </div>
     );
 };

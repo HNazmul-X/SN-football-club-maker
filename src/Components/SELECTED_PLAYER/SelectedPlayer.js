@@ -27,6 +27,7 @@ const SelectedPlayer = (props) => {
                     <hr className="m-1"/>
                     <h5>Total Sellary</h5>
                     <h5>$ {totalSellary}</h5>
+                    <button onClick={()=> props.setIsShowFullTeamVisible(true)} className="fts-button">Show full Team</button>
                 </div>
             </div>
         </div>
