@@ -1,0 +1,27 @@
+.player-preview.card {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  background: transparent;
+}
+
+.player-preview.card img.img-fluid {
+  height: 204px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+.player-preview.card p {
+  margin-bottom: 2px;
+}
+
+.player-preview.card .card-footer {
+  position: absolute;
+  bottom: 0px;
+}
+
+.player-preview.card .star-icon {
+  color: goldenrod;
+}
+/*# sourceMappingURL=PlayerPreview.css.map */

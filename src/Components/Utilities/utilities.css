@@ -1,0 +1,99 @@
+.alert-bg-area {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.301);
+}
+
+.alert-bg-area .alert-area {
+  width: 450px;
+  padding: 20px;
+  background: var(--bg-1);
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-animation: zoom-in 0.4s;
+          animation: zoom-in 0.4s;
+}
+
+.alert-bg-area .alert-area .line {
+  height: 20px;
+  background: var(--bg-2);
+  width: 100%;
+  opacity: 1;
+  position: absolute;
+  top: -16px;
+  z-index: 1;
+  left: 0px;
+}
+
+.alert-bg-area .alert-area.success {
+  --color:#3A9243;
+  --bg-1:#D8F1DA;
+  --bg-2:#79D382;
+}
+
+.alert-bg-area .alert-area.warning {
+  --color:#92893A;
+  --bg-1:#F1ECD8;
+  --bg-2:#D1D379;
+  --color-text:#7A7C28;
+}
+
+.alert-bg-area .alert-area .alert-card {
+  margin: 20px 0 0 0;
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--color-text);
+}
+
+.alert-bg-area .alert-area .icon {
+  color: white;
+  background: var(--bg-2);
+  padding: 10px;
+  font-size: 90px;
+  border-radius: 50%;
+}
+
+.alert-bg-area .alert-area .close-button {
+  border: none;
+  background: var(--color);
+  color: white;
+  padding: 6px 25px;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  border-radius: 10px;
+}
+
+@-webkit-keyframes zoom-in {
+  0% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+    opacity: 0.3;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoom-in {
+  0% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+    opacity: 0.3;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=utilities.css.map */

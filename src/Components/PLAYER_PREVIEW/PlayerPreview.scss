@@ -1,0 +1,21 @@
+.player-preview.card {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background: transparent;
+    img.img-fluid {
+        height: 204px;
+        object-fit: cover;
+        width: 100%;
+    }
+    p {
+        margin-bottom: 2px;
+    }
+    .card-footer {
+        position: absolute;
+        bottom: 0px;
+    }
+    .star-icon {
+        color: goldenrod;
+    }
+}

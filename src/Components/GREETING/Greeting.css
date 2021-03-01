@@ -1,0 +1,38 @@
+.welcome-note-area {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: white;
+  z-index: 102;
+  text-align: center;
+}
+
+.welcome-note-area .welcome-note {
+  width: 60vw;
+  height: 80%;
+  margin: auto;
+}
+
+.welcome-note-area .welcome-note .img img {
+  width: 50%;
+}
+
+.welcome-note-area .welcome-note .title h1 {
+  color: #5683ff;
+  font-weight: 800;
+}
+
+.welcome-note-area .welcome-note .title button {
+  border: none;
+  color: #5683ff;
+  border: 2px solid #5683ff;
+  border-radius: 20px;
+  padding: 5px 40px;
+  margin-top: 30px;
+}
+
+.welcome-note-area .welcome-note .title button:hover {
+  background: #5683ff;
+  color: white;
+}
+/*# sourceMappingURL=Greeting.css.map */
